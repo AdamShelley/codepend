@@ -6,7 +6,7 @@ import { Overlay } from "./overlay";
 import { formatDistanceToNow } from "date-fns";
 import { useAuth } from "@clerk/nextjs";
 import { Footer } from "./footer";
-
+import { Skeleton } from "@/components/ui/skeleton";
 interface GenCardProps {
   id: string;
   title: string;
@@ -33,7 +33,7 @@ export const GenCard = ({
   const createdAtLabel = formatDistanceToNow(createdAt, { addSuffix: true });
 
   return (
-    <Link href={`/gen/${id}`}>
+    <Link href={`/gens/${id}`}>
       <div className="group aspect-[100/127] border rounded-lg flex flex-col justify-between overflow-hidden">
         <div className="relative flex-1 bg-amber-50">
           <Image src={imageUrl} alt={title} fill className="object-fit" />
@@ -49,5 +49,13 @@ export const GenCard = ({
         />
       </div>
     </Link>
+  );
+};
+
+GenCard.Skeleton = function GenCardSkeleton() {
+  return (
+    <div className="aspect-[100/127] rounded-lg overflow-hidden">
+      <Skeleton className="w-full h-full" />
+    </div>
   );
 };

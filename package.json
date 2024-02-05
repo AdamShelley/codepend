@@ -11,6 +11,9 @@
   "dependencies": {
     "@clerk/clerk-react": "^4.30.3",
     "@clerk/nextjs": "^4.29.5",
+    "@liveblocks/client": "^1.9.7",
+    "@liveblocks/node": "^1.9.7",
+    "@liveblocks/react": "^1.9.7",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tooltip": "^1.0.7",

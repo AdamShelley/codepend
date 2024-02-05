@@ -20,7 +20,18 @@ export const GenList = ({ orgId, query }: GenListProps) => {
   const data = useQuery(api.gens.get, { orgId });
 
   if (data === undefined) {
-    return <div> Loading ...</div>;
+    return (
+      <div>
+        <h2 className="text-3xl">
+          {query.completed ? "Completed Gens" : "Gens"}
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-5 mt-8 pb-10">
+          <GenCard.Skeleton />
+          <GenCard.Skeleton />
+          <GenCard.Skeleton />
+        </div>
+      </div>
+    );
   }
 
   if (!data?.length && query.search) {
