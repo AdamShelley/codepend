@@ -1,5 +1,6 @@
 import { Editor } from "./_components/editor";
 import { Room } from "@/components/room";
+import { QuestionSidebar } from "./_components/question-sidebar";
 
 interface GenIdPageProps {
   params: {
@@ -10,8 +11,13 @@ interface GenIdPageProps {
 const GenIdPage = ({ params }: GenIdPageProps) => {
   return (
     <Room roomId={params.genId} fallback={<div>Loading...</div>}>
-      <p>Gen Id Page</p>
-      <Editor />
+      <div className="h-full w-full bg-gray-800 flex flex-col">
+        <h3 className="text-yellow-500">{params.genId}</h3>
+        <div className="flex h-full">
+          <QuestionSidebar />
+          <Editor />
+        </div>
+      </div>
     </Room>
   );
 };

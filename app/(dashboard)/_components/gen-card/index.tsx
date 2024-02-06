@@ -34,9 +34,9 @@ export const GenCard = ({
 
   return (
     <Link href={`/gens/${id}`}>
-      <div className="group aspect-[100/127] border rounded-lg flex flex-col justify-between overflow-hidden">
-        <div className="relative flex-1 bg-amber-50">
-          <Image src={imageUrl} alt={title} fill className="object-fit" />
+      <div className="group w-[250px] h-[250px] border rounded-sm flex flex-col justify-center overflow-hidden">
+        <div className="relative flex-1 bg-gray-800">
+          {/* <Image src={imageUrl} alt={title} fill className="object-fit" /> */}
           <Overlay />
         </div>
         <Footer
@@ -54,7 +54,7 @@ export const GenCard = ({
 
 GenCard.Skeleton = function GenCardSkeleton() {
   return (
-    <div className="aspect-[100/127] rounded-lg overflow-hidden">
+    <div className="aspect-[1/1] rounded-lg overflow-hidden">
       <Skeleton className="w-full h-full" />
     </div>
   );
