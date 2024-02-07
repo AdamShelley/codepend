@@ -11,7 +11,7 @@ const roboto = Roboto({
 });
 
 export const QuestionSidebar = () => {
-  const [openSidebar, setOpenSidebar] = useState(true);
+  const [openSidebar, setOpenSidebar] = useState(false);
 
   const sidebarHandler = () => {
     setOpenSidebar(!openSidebar);
@@ -27,7 +27,7 @@ export const QuestionSidebar = () => {
       >
         <div className="flex flex-col">
           <ChevronLeft
-            className="h-10 w-10  cursor-pointer"
+            className="absolute top-[40%] right-0 h-10 w-10 cursor-pointer"
             onClick={sidebarHandler}
           />
           <h3 className={cn("text-2xl", roboto.className)}>Question</h3>
@@ -53,7 +53,7 @@ export const QuestionSidebar = () => {
         </div>
       </div>
       <ChevronRight
-        className="absolute top-20 left-5 h-10 w-10  cursor-pointer"
+        className="absolute top-[40%] left-5 h-10 w-10  cursor-pointer"
         onClick={sidebarHandler}
       />
     </>

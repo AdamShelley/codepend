@@ -5,6 +5,7 @@ import { ConvexClientProvider } from "@/providers/convex-client-provider";
 
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { Navbar } from "./(dashboard)/_components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
