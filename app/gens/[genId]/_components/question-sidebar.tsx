@@ -4,6 +4,8 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Roboto } from "next/font/google";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const roboto = Roboto({
   weight: "400",
@@ -30,6 +32,14 @@ export const QuestionSidebar = () => {
             className="absolute top-[40%] right-0 h-10 w-10 cursor-pointer"
             onClick={sidebarHandler}
           />
+          <Link href="/">
+            <Button className="flex" variant="ghost">
+              <ChevronLeft className="h-10 w-10" />
+              <h3 className={cn("text-lg", roboto.className)}>
+                Back to all Gens
+              </h3>
+            </Button>
+          </Link>
           <h3 className={cn("text-2xl", roboto.className)}>Question</h3>
           <p className={cn("mt-5 text-sm", roboto.className)}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum rem,

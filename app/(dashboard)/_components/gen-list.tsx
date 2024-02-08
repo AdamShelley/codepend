@@ -47,11 +47,11 @@ export const GenList = ({ orgId, query }: GenListProps) => {
   }
 
   return (
-    <div className="m-5">
+    <div className="m-2">
       <h2 className="text-3xl">
         {query.completed ? "Completed Gens" : "Gens"}
       </h2>
-      <div className="grid place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 mt-8 pb-10">
+      <div className="grid gap-10 place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 mt-8 pb-5 ml-5">
         {data?.map((gen) => (
           <GenCard
             key={gen._id}
