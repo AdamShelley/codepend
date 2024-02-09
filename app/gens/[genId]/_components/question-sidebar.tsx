@@ -60,6 +60,8 @@ export const QuestionSidebar = () => {
             recusandae eligendi quaerat quas doloremque quo repellendus autem,
             sint molestias?
           </p>
+          <h3 className={cn("text-2xl mt-5", roboto.className)}>Tips</h3>
+          <p className={cn("mt-5 text-sm", roboto.className)}>Tip area</p>
         </div>
       </div>
       <ChevronRight
