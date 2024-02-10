@@ -1,4 +1,4 @@
-import { Editor } from "./_components/editor";
+import { EditorComponent } from "./_components/editor";
 import { Room } from "@/components/room";
 import { QuestionSidebar } from "./_components/question-sidebar";
 import { Navbar } from "@/app/(dashboard)/_components/navbar";
@@ -19,7 +19,7 @@ const GenIdPage = ({ params }: GenIdPageProps) => {
         </h3>
         <div className="flex h-full">
           <QuestionSidebar />
-          <Editor />
+          <EditorComponent />
         </div>
       </div>
     </Room>
