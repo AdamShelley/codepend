@@ -12,12 +12,12 @@ interface GenIdPageProps {
 const GenIdPage = ({ params }: GenIdPageProps) => {
   return (
     <Room roomId={params.genId} fallback={<div>Loading...</div>}>
-      <div className="h-full w-full flex flex-col">
+      <div className="h-full flex flex-col">
         <Navbar />
         <h3 className="text-yellow-500 flex items-center justify-center mt-5">
           {params.genId}
         </h3>
-        <div className="flex h-full">
+        <div className="flex h-full min-h-full">
           <QuestionSidebar />
           <EditorComponent />
         </div>
